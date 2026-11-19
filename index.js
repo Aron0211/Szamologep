@@ -1,6 +1,6 @@
 const szam = document.getElementsByClassName("szam");
-
 const inputElem = document.getElementById("mezo");
+
 szam[0].addEventListener("click", fv)
 szam[1].addEventListener("click", fv)
 szam[2].addEventListener("click", fv)
@@ -20,11 +20,7 @@ szam[15].addEventListener("click", fv)
 
 const jelek = document.getElementsByClassName("jelek");
 
-jelek[0].addEventListener("click", fv)
-jelek[1].addEventListener("click", fv)
-jelek[2].addEventListener("click", fv)
-jelek[3].addEventListener("click", fv)
-jelek[4].addEventListener("click", fv)
+
 
 function fv(){
     console.log(event.target.id)
