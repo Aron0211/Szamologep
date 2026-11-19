@@ -1,0 +1,50 @@
+article{
+    background-color: white;
+    border-radius: 10px;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background-color: grey;
+}
+
+.gomb-tarolo{
+    display: grid;
+    grid-template-columns: repeat(4, 65px);
+    gap: 10px;
+    justify-content: center;
+    
+}
+
+.gomb-tarolo button{
+    border: none;
+    margin: 2.5px;
+    padding: 5px;
+    border-radius: 5px;
+    
+}
+
+.mezo{
+    background-color: rgb(226, 223, 223);
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#torles{
+    background-color: rgb(236, 121, 121);
+    font-weight: bold;
+}
+
+#egyenlo{
+    background-color: rgb(94, 128, 94);
+    font-weight: bold;
+}
+
+.jelek{
+    background-color: lightblue;
+    font-weight: bold;
+}

@@ -1,0 +1,15 @@
+A működés megvalósítása
+
+Hozz létre három változót elsoSzamjegySzovege, masodikSzamjegySzovege és muvelet néven! Kezdetben mindhárom változó értéke üres szöveg legyen! Kezdetben az értékük üres legyen! let elsoSzamjegy="", let muvelet="". FONTOS! A számkat most szövegesen fogjuk tárolni, majd a számításnál alakítjuk át számmá a Number(elsoSzamjegySzovege) metódussal. 
+
+A számjegyekre kattintva gyűjtsd az első számot az elsoSzamjegySzovegeváltozóban! Az egymás után megnyomott számjegyeket fűzd össze, hogy többjegyű számot is meg lehessen adni!
+
+A műveleti jelre kattintva tárold a kiválasztott jelet a muvelet változóban! 
+
+A művelet kiválasztása után a számjegyekre kattintva már a elsoSzamjegySzovege változóban gyűjtsd a második számot!
+
+A kijelzőn folyamatosan jelenjen meg a megadott első szám, a műveleti jel és a második szám!
+
+Az egyenlőségjelre kattintva alakítsd számmá a két tárolt értéket - Number(elsoSzamjegy) - , majd a műveleti jel alapján végezd el a megfelelő számítást! Az eredményt jelenítsd meg a kijelzőn!
+
+A számítás elvégzése után állítsd mindhárom változó értékét ürere! Az eredmény maradjon a kijelzőn a következő szám bevitelének megkezdéséig!
