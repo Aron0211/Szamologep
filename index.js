@@ -1,28 +1,90 @@
-const szam = document.getElementsByClassName("szam");
-const inputElem = document.getElementById("mezo");
+let elsoSzamjegySzovege = "" // a változót létrehoztuk, beállítottuk az értékét üres szövegre
+let masodikSzamjegySzovege = ""
+let muvelet = ""
 
-szam[0].addEventListener("click", fv)
-szam[1].addEventListener("click", fv)
-szam[2].addEventListener("click", fv)
-szam[3].addEventListener("click", fv)
-szam[4].addEventListener("click", fv)
-szam[5].addEventListener("click", fv)
-szam[6].addEventListener("click", fv)
-szam[7].addEventListener("click", fv)
-szam[8].addEventListener("click", fv)
-szam[9].addEventListener("click", fv)
-szam[10].addEventListener("click", fv)
-szam[11].addEventListener("click", fv)
-szam[12].addEventListener("click", fv)
-szam[13].addEventListener("click", fv)
-szam[14].addEventListener("click", fv)
-szam[15].addEventListener("click", fv)
+const szamok = document.getElementsByClassName("szam") // eredménye egy lista - megfogjuk a Classnévvel ellátott HTML elemet
+const fosok = document.getElementsByClassName("fos")// eredménye lista ugyanúgy
+const kiiro = document.getElementById("kiirato")
+const egyenlo = document.getElementById("egyenlo")
 
-const jelek = document.getElementsByClassName("jelek");
+console.log(szamok[0].textContent)
+
+for (let index = 0; index < szamok.length; index++) {
+    szamok[index].addEventListener("click", beir) 
+}
+    
 
 
 
-function fv(){
-    console.log(event.target.id)
-    inputElem.value += event.target.id
+function beir(event){
+    //az input mezőbe írja a számokat, amikre kattintottunk
+    //Mi jelenti a számot?
+    console.log(event.target)
+    console.log(event.target.textContent)
+
+    kiiro.value += event.target.textContent // az input elembe beleírja annak az elemnek az értékét amire rákattintottunk
+    // a kiiro input elem, value-ja van
+
+}
+
+/* ha rákattintunk egy műveleti jelre, akkor:
+1. mentsük el az input elem tartalmát, az elsoSzamjegySzovege változóba
+2. A műveleti jelet mentsük el muvelet változóba
+3. Töröljük ki az input elem tartalmát*/
+
+for (let index = 0; index < fosok.length; index++) {
+    fosok[index].addEventListener("click", muveletElvegzese)
+    
+}
+
+function muveletElvegzese(){
+    elsoSzamjegySzovege = kiiro.value
+    console.log(elsoSzamjegySzovege)
+    console.log(event.target.textContent)//ez visszaadja a műveleti jelet
+    muvelet = event.target.textContent
+    kiiro.value = ""
+}
+
+/* Az egyenlőség jel működése:
+1. Ha rákattintunk az egyenlőség jelre
+2. Akkor a masodikSzamjegySzovege mentsük el az input mező tartalmát
+3. Végezzük el a műveletet az elsoSzamjegySzovege és a masodikSzamjegySzovege számok között
+4. Az eredményt írjuk ki az input elembe*/
+
+
+egyenlo.addEventListener("click", szamolas)
+
+//SZÁMOLÁS//
+function szamolas(){
+    masodikSzamjegySzovege = kiiro.value
+    //ide kell egy elágazás a műveleti jel szerint
+    let eredmeny = 0
+    if(muvelet =="+"){
+        eredmeny = Number(elsoSzamjegySzovege) + Number(masodikSzamjegySzovege)
+    }
+    if(muvelet =="-"){
+        eredmeny = Number(elsoSzamjegySzovege) -  Number(masodikSzamjegySzovege)
+    }
+    if(muvelet =="*"){
+        eredmeny = Number(elsoSzamjegySzovege) * Number(masodikSzamjegySzovege)
+    }
+    if(muvelet =="/" && masodikSzamjegySzovege!="0"){
+        eredmeny = Number(elsoSzamjegySzovege) / Number(masodikSzamjegySzovege)
+    }
+
+
+
+    
+    kiiro.value = eredmeny
+}
+
+
+
+const torles = document.getElementById("torles")
+
+torles.addEventListener("click", kitorles)
+function kitorles(event){
+    kiiro = kiiro.value = ""
+    elsoSzamjegySzovege = ""
+    masodikSzamjegySzovege = ""
 }

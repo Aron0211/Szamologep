@@ -1,41 +1,39 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="számológép">
     <meta name="keywords" content="számológép">
-    <meta name="author" content="Papp Áron">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Számológép | Papp Áron</title>
     <link rel="stylesheet" href="formazas.css">
-    <link rel="shortcut icon" href="calculator.png" type="image/x-icon">
     <script type="module" src="index.js"></script>
+    <title>Számológép | Papp Áron</title>
 </head>
 <body>
-        <article class="test">
-            <h1>Számológép</h1>
+    <main>
+        <h1>Számológép</h1>
+        <input type="text" id="kiirato">
+        <div id="gombok">
+            <button class="szam" id="nulla">0</button>
+            <button class="szam" id="egy">1</button>
+            <button class="szam" id="ketto">2</button>
+            <button class="szam" id="harom">3</button>
+            <button class="fos" id="osszeadas">+</button>
+            
+            <button class="szam" id="negy">4</button>
+            <button class="szam" id="ot">5</button>
+            <button class="szam" id="hat">6</button>
+            <button class="fos" id="kivonas">-</button>
 
-            <input id="mezo" type="text">
+            <button class="szam" id="het">7</button>
+            <button class="szam" id="nyolc">8</button>
+            <button class="szam" id="kilenc">9</button>
+            <button class="fos" id="szorzas">*</button>
 
-            <div class="gomb-tarolo">
-                <button id="7" class="szam">7</button>
-                <button id="8" class="szam">8</button>
-                <button id="9" class="szam">9</button>
-                <button id="/" class="jelek">/</button>
-                <button id="4" class="szam">4</button>
-                <button id="5" class="szam">5</button>
-                <button id="6" class="szam">6</button>
-                <button id="*" class="jelek">*</button>
-                <button id="1" class="szam">1</button>
-                <button id="2" class="szam">2</button>
-                <button id="3" class="szam">3</button>
-                <button id="-" class="jelek">-</button>
-                <button id="torles">C</button>
-                <button id="0" class="szam">0</button>
-                <button id="=" class="jelek">=</button>
-                <button id="+" class="jelek">+</button>
-            </div>
-        </article> 
-   
+            <button  id="torles">C</button>
+            <button  id="egyenlo">=</button>
+            <button class="fos" id="osztas">/</button>
+        </div>
+    </main>
 </body>
 </html>
