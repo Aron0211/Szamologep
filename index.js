@@ -1,11 +1,15 @@
 let elsoSzamjegySzovege = "" // a változót létrehoztuk, beállítottuk az értékét üres szövegre
 let masodikSzamjegySzovege = ""
 let muvelet = ""
-
+//szám gombok
 const szamok = document.getElementsByClassName("szam") // eredménye egy lista - megfogjuk a Classnévvel ellátott HTML elemet
+//műveleti jelek
 const fosok = document.getElementsByClassName("fos")// eredménye lista ugyanúgy
-const kiiro = document.getElementById("kiirato")
+const kiiro = document.getElementById("kiirato")//input tag
+//egyenlőség jel
 const egyenlo = document.getElementById("egyenlo")
+//a C törlés jel
+const torles = document.getElementById("torles")
 
 console.log(szamok[0].textContent)
 
@@ -59,16 +63,16 @@ function szamolas(){
     masodikSzamjegySzovege = kiiro.value
     //ide kell egy elágazás a műveleti jel szerint
     let eredmeny = 0
-    if(muvelet =="+"){
+    if(muvelet == "+"){
         eredmeny = Number(elsoSzamjegySzovege) + Number(masodikSzamjegySzovege)
     }
-    if(muvelet =="-"){
+    if(muvelet == "-"){
         eredmeny = Number(elsoSzamjegySzovege) -  Number(masodikSzamjegySzovege)
     }
-    if(muvelet =="*"){
+    if(muvelet == "*"){
         eredmeny = Number(elsoSzamjegySzovege) * Number(masodikSzamjegySzovege)
     }
-    if(muvelet =="/" && masodikSzamjegySzovege!="0"){
+    if(muvelet == "/" && masodikSzamjegySzovege!="0"){
         eredmeny = Number(elsoSzamjegySzovege) / Number(masodikSzamjegySzovege)
     }
 
@@ -80,7 +84,7 @@ function szamolas(){
 
 
 
-const torles = document.getElementById("torles")
+
 
 torles.addEventListener("click", kitorles)
 function kitorles(event){
